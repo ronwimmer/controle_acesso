@@ -1,0 +1,54 @@
+/*
+ * Harbour 3.2.0dev (r2011030937)
+ * MinGW GNU C 7.3 (32-bit)
+ * Generated C source from "C:\Users\Ronaldo\Documents\GitHub\controle_acesso\code\configdb_form_oninit.prg"
+ */
+
+#include "hbvmpub.h"
+#include "hbinit.h"
+
+
+HB_FUNC( CONFIGDB_FORM_ONINIT );
+HB_FUNC_EXTERN( SETPROPERTY );
+HB_FUNC_EXTERN( ERRORSYS );
+
+
+HB_INIT_SYMBOLS_BEGIN( hb_vm_SymbolInit_CONFIGDB_FORM_ONINIT )
+{ "CONFIGDB_FORM_ONINIT", {HB_FS_PUBLIC | HB_FS_FIRST | HB_FS_LOCAL}, {HB_FUNCNAME( CONFIGDB_FORM_ONINIT )}, NULL },
+{ "SETPROPERTY", {HB_FS_PUBLIC}, {HB_FUNCNAME( SETPROPERTY )}, NULL },
+{ "PCHOSTNAME", {HB_FS_PUBLIC | HB_FS_MEMVAR}, {NULL}, NULL },
+{ "PCDATABASE", {HB_FS_PUBLIC | HB_FS_MEMVAR}, {NULL}, NULL },
+{ "PCUSERNAME", {HB_FS_PUBLIC | HB_FS_MEMVAR}, {NULL}, NULL },
+{ "PCPASSWORD", {HB_FS_PUBLIC | HB_FS_MEMVAR}, {NULL}, NULL },
+{ "ERRORSYS", {HB_FS_PUBLIC}, {HB_FUNCNAME( ERRORSYS )}, NULL }
+HB_INIT_SYMBOLS_EX_END( hb_vm_SymbolInit_CONFIGDB_FORM_ONINIT, "C:\\Users\\Ronaldo\\Documents\\GitHub\\controle_acesso\\code\\configdb_form_oninit.prg", 0x0, 0x0003 )
+
+#if defined( HB_PRAGMA_STARTUP )
+   #pragma startup hb_vm_SymbolInit_CONFIGDB_FORM_ONINIT
+#elif defined( HB_DATASEG_STARTUP )
+   #define HB_DATASEG_BODY    HB_DATASEG_FUNC( hb_vm_SymbolInit_CONFIGDB_FORM_ONINIT )
+   #include "hbiniseg.h"
+#endif
+
+HB_FUNC( CONFIGDB_FORM_ONINIT )
+{
+	static const HB_BYTE pcode[] =
+	{
+		36,7,0,176,1,0,106,9,99,111,110,102,105,103,
+		100,98,0,106,12,116,120,116,72,111,115,116,78,97,
+		109,101,0,106,6,118,97,108,117,101,0,109,2,0,
+		20,4,36,8,0,176,1,0,106,9,99,111,110,102,
+		105,103,100,98,0,106,12,116,120,116,68,97,116,97,
+		66,97,115,101,0,106,6,118,97,108,117,101,0,109,
+		3,0,20,4,36,9,0,176,1,0,106,9,99,111,
+		110,102,105,103,100,98,0,106,12,116,120,116,85,115,
+		101,114,110,97,109,101,0,106,6,118,97,108,117,101,
+		0,109,4,0,20,4,36,10,0,176,1,0,106,9,
+		99,111,110,102,105,103,100,98,0,106,12,116,120,116,
+		80,97,115,115,87,111,114,100,0,106,6,118,97,108,
+		117,101,0,109,5,0,20,4,36,12,0,100,110,7
+	};
+
+	hb_vmExecute( pcode, symbols );
+}
+

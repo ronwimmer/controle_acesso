@@ -1,0 +1,9 @@
+Main.Prg
+configdb_btnfecharconfiguracao_action.prg
+configdb_btnsalvarconfiguracao_action.prg
+configdb_btntestarconexao_action.prg
+configdb_form_oninit.prg
+inifile.prg
+main_form_onrelease.prg
+mostra_config.prg
+mysql.prg
