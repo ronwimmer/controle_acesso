@@ -5,6 +5,7 @@ DEFINE WINDOW TEMPLATE AT 148 , 313 WIDTH 1054 HEIGHT 581 VIRTUAL WIDTH Nil VIRT
 
     DEFINE MAIN MENU
         DEFINE POPUP "Uteis"
+            MENUITEM "Usuários" ACTION mostra_lista_usuarios()
             MENUITEM "Configuração DB" ACTION mostra_configdb()
         END POPUP
     END MENU

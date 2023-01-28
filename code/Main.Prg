@@ -40,3 +40,18 @@ Function Main
         Main.Activate
 
 Return
+
+function ConectaBanco()
+        local lResultado := .F.
+
+        if MySQL_Connect(pcHostName,pcUserName,pcPassWord)
+                if MySQL_Database_Connect(pcDataBase)
+                        lResultado := .T.
+                else
+                        MsgStop("Banco de Dados [" + pcDataBase + "] não conectado!", "SQL")
+                endif
+        else
+                MsgStop("Servidor [" + pcHostName + "] não conectado!", "SQL")
+        endif
+
+return lResultado

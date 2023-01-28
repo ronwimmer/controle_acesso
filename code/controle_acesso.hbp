@@ -3,7 +3,12 @@ configdb_btnfecharconfiguracao_action.prg
 configdb_btnsalvarconfiguracao_action.prg
 configdb_btntestarconexao_action.prg
 configdb_form_oninit.prg
+funcoes_usuarios.Prg
 inifile.prg
+listausuarios_btnsairlistausuarios_action.prg
+listausuarios_form_oninit.prg
+listausuarios_form_onrelease.prg
 main_form_onrelease.prg
 mostra_config.prg
+mostra_lista_usuarios.Prg
 mysql.prg
