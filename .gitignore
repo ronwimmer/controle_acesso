@@ -1,2 +1,2 @@
 code\.hbmk\*.*
-code\.hbmk
+code\.hbmk\win\mingw\*.*
