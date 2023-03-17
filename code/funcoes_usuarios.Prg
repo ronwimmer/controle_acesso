@@ -16,3 +16,20 @@ Function MostraUsuarios()
     endif
 
 return NIL
+
+function ValidaUsuario(cUserName, cPassword, cUserCode)
+
+    local lResult := .F.
+    local cQuery  := "SELECT codusuario FROM usuario WHERE nome = '" + cUserName + "' AND senha = '" + cPassword + "'"
+    local aItems  := {}
+
+    if ConectaBanco()
+        aItems := MySQL_ExecQuery(oServer, cQuery)
+    endif
+
+    if len( aItems ) > 0
+        lResult   := .T.
+        cUserCode := aItems[1][1]
+    endif
+
+return lResult

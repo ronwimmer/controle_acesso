@@ -15,6 +15,9 @@ Function Main
         public pcUserName := ""
         public pcPassWord := ""
 
+        public pcUserLogin := ""
+        public pcUserCode  := 0
+
         ini_le()   // lê arquivo .ini de configuração
 
         if empty(pcHostName)
@@ -35,9 +38,13 @@ Function Main
                 end if
         endif
 
-        Load Window Main
-        Main.Center
-        Main.Activate
+        mostra_tela_login()
+
+        if !empty(pcUserLogin)
+                Load Window Main
+                Main.Center
+                Main.Activate
+        endif
 
 Return
 
