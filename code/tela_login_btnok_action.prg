@@ -7,15 +7,15 @@ Function tela_login_btnok_action
     local cUserName := ""
     local cPassword := ""
     local cUserCode := 0
+    local lAdmin    := .F.
 
     cUserName := getProperty("tela_login","lblUsuario","value")
     cPassword := getProperty("tela_login","lblSenha","value")
 
-    if ValidaUsuario(cUserName, cPassword, @cUserCode)
+    if ValidaUsuario(cUserName, cPassword, @cUserCode, @lAdmin)
         pcUserLogin := cUserName
         pcUserCode  := cUserCode
-    else
-        MsgStop("Usuário/Senha incorreto!", "Identificação de Usuário")
+        plAdmin     := lAdmin
     end if
 
     doMethod("tela_login","RELEASE")

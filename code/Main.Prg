@@ -17,6 +17,7 @@ Function Main
 
         public pcUserLogin := ""
         public pcUserCode  := 0
+        public plAdmin     := .F.
 
         ini_le()   // lê arquivo .ini de configuração
 

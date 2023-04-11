@@ -17,10 +17,10 @@ Function MostraUsuarios()
 
 return NIL
 
-function ValidaUsuario(cUserName, cPassword, cUserCode)
+function ValidaUsuario(cUserName, cPassword, cUserCode, lAdmin)
 
     local lResult := .F.
-    local cQuery  := "SELECT codusuario FROM usuario WHERE nome = '" + cUserName + "' AND senha = '" + cPassword + "'"
+    local cQuery  := "SELECT codusuario, administrador, bloqueado, excluido FROM usuario WHERE nome = '" + cUserName + "' AND senha = '" + cPassword + "'"
     local aItems  := {}
 
     if ConectaBanco()
@@ -28,8 +28,17 @@ function ValidaUsuario(cUserName, cPassword, cUserCode)
     endif
 
     if len( aItems ) > 0
-        lResult   := .T.
-        cUserCode := aItems[1][1]
+        if (aItems[1][3] == "S")
+            MsgStop("Usuário teve seu acesso bloqueado! Contate o administrador do sistema!", "Identificação de Usuário")
+        elseif (aItems[1][4] == "S")
+            MsgStop("Usuário/Senha incorreto!", "Identificação de Usuário")
+        else
+            lResult   := .T.
+            cUserCode := aItems[1][1]
+            lAdmin := (aItems[1][2] == "S")
+        endif
+    else
+        MsgStop("Usuário/Senha incorreto!", "Identificação de Usuário")
     endif
 
 return lResult
