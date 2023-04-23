@@ -16,8 +16,18 @@ Function tela_login_btnok_action
         pcUserLogin := cUserName
         pcUserCode  := cUserCode
         plAdmin     := lAdmin
+
+        doMethod("tela_login","RELEASE")
+    else
+        pnTry++
     end if
 
-    doMethod("tela_login","RELEASE")
+    // quantidade máxima de erros = 2
+    // portanto quantidade máxima de tentativas = 3
+    if pnTry >= 3
+        BloqueiaUsuario(cUserName)
+        MsgStop("Quantidade de tentativas excedida! Usuário bloqueado! Contate o administrador do sistema!", "Identificação de Usuário")
+        doMethod("tela_login","RELEASE")
+    endif
 
 Return Nil

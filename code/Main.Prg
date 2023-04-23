@@ -8,16 +8,18 @@ Function Main
         set century on
         set date british
 
-        public oServer := NIL
-        public pcFileIni := GetStartUpFolder() + "\sistema.ini"
-        public pcHostName := ""
-        public pcDataBase := ""
-        public pcUserName := ""
-        public pcPassWord := ""
+        public oServer     := NIL
+        public pcFileIni   := GetStartUpFolder() + "\sistema.ini"
+        public pcHostName  := ""
+        public pcDataBase  := ""
+        public pcUserName  := ""
+        public pcPassWord  := ""
 
         public pcUserLogin := ""
         public pcUserCode  := 0
         public plAdmin     := .F.
+
+        public pnTry       := 0
 
         ini_le()   // lê arquivo .ini de configuração
 

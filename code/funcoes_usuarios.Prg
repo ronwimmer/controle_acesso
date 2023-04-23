@@ -42,3 +42,14 @@ function ValidaUsuario(cUserName, cPassword, cUserCode, lAdmin)
     endif
 
 return lResult
+
+function BloqueiaUsuario(cUserName)
+
+    local cQuery  := "UPDATE usuario SET bloqueado = 'S' WHERE nome = '" + cUserName + "'"
+    local lResult := .F.
+
+    if ConectaBanco()
+        lResult := MySQL_Exec(oServer, cQuery)
+    endif
+
+return lResult
