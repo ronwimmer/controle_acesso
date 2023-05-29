@@ -4,22 +4,22 @@ declare window configdb
 
 Function configdb_btntestarconexao_action
 
-    local cHostname, cDatabase, cUsername, cPassword
+    local cServidor, cBancoDados, cNomeUsuario, cSenha
 
-    cHostname := getProperty("configdb","txtHostName","value")
-    cDatabase := getProperty("configdb","txtDataBase","value")
-    cUsername := getProperty("configdb","txtUsername","value")
-    cPassword := getProperty("configdb","txtPassWord","value")
+    cServidor    := getProperty("configdb","txtHostName","value")
+    cBancoDados  := getProperty("configdb","txtDataBase","value")
+    cNomeUsuario := getProperty("configdb","txtUsername","value")
+    cSenha       := getProperty("configdb","txtPassWord","value")
 
-    if MySQL_Connect(cHostname,cUsername,cPassword)
-        if MySQL_Database_Connect(cDatabase)
+    if MySQL_Connect(cServidor,cNomeUsuario,cSenha)
+        if MySQL_Database_Connect(cBancoDados)
                 MsgInfo("Conexão com servidor bem sucedida!", "SQL")
         else
-                MsgStop("Banco de dados [" + cDatabase + "] não localizado!", "SQL")
+                MsgStop("Banco de dados [" + cBancoDados + "] não localizado!", "SQL")
         end if
         MySQL_Destroy()
     else
-        MsgStop("Servidor [" + cHostname + "] não conectado!", "SQL")
+        MsgStop("Servidor [" + cServidor + "] não conectado!", "SQL")
     end if
 
 Return Nil

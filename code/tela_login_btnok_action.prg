@@ -4,18 +4,18 @@ declare window tela_login
 
 Function tela_login_btnok_action
 
-    local cUserName := ""
-    local cPassword := ""
-    local cUserCode := 0
-    local lAdmin    := .F.
+    local cNomeUsuario   := ""
+    local cSenha         := ""
+    local cCodigoUsuario := 0
+    local lAdministrador := .F.
 
-    cUserName := getProperty("tela_login","lblUsuario","value")
-    cPassword := getProperty("tela_login","lblSenha","value")
+    cNomeUsuario := getProperty("tela_login","lblUsuario","value")
+    cSenha       := getProperty("tela_login","lblSenha","value")
 
-    if ValidaUsuario(cUserName, cPassword, @cUserCode, @lAdmin)
-        pcUserLogin := cUserName
-        pcUserCode  := cUserCode
-        plAdmin     := lAdmin
+    if ValidaUsuario(cNomeUsuario, cSenha, @cCodigoUsuario, @lAdministrador)
+        pcUserLogin := cNomeUsuario
+        pcUserCode  := cCodigoUsuario
+        plAdmin     := lAdministrador
 
         doMethod("tela_login","RELEASE")
     else
@@ -25,7 +25,7 @@ Function tela_login_btnok_action
     // quantidade máxima de erros = 2
     // portanto quantidade máxima de tentativas = 3
     if pnTry >= 3
-        BloqueiaUsuario(cUserName)
+        BloqueiaUsuario(cNomeUsuario)
         MsgStop("Quantidade de tentativas excedida! Usuário bloqueado! Contate o administrador do sistema!", "Identificação de Usuário")
         doMethod("tela_login","RELEASE")
     endif
