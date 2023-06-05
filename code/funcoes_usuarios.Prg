@@ -53,3 +53,14 @@ function BloqueiaUsuario(cUserName)
     endif
 
 return lResult
+
+function leDadosUsuario(cCodUsuario)
+
+    local aResultado := {}
+    local cConsulta  := "SELECT codusuario, nome, senha, administrador, bloqueado, excluido, datacadastro, dataatualizacao FROM usuario WHERE codusuario = " + alltrim(cCodUsuario)
+    local aItems     := {}
+
+    aItems := MySQL_ExecQuery(oServer, cConsulta)
+    aResultado := aItems[1]
+    
+return aResultado

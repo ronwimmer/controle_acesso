@@ -8,7 +8,7 @@ DEFINE WINDOW TEMPLATE AT 173 , 446 WIDTH 550 HEIGHT 312 VIRTUAL WIDTH Nil VIRTU
         COL    420
         WIDTH  100
         HEIGHT 28
-        ACTION Nil
+        ACTION listausuarios_btnconsultarusuario_action()
         CAPTION "Consultar"
         FONTNAME "Arial"
         FONTSIZE 9
@@ -34,7 +34,7 @@ DEFINE WINDOW TEMPLATE AT 173 , 446 WIDTH 550 HEIGHT 312 VIRTUAL WIDTH Nil VIRTU
         COL    420
         WIDTH  100
         HEIGHT 28
-        ACTION Nil
+        ACTION listausuarios_btnincluirusuario_action()
         CAPTION "Incluir"
         FONTNAME "Arial"
         FONTSIZE 9
@@ -60,7 +60,7 @@ DEFINE WINDOW TEMPLATE AT 173 , 446 WIDTH 550 HEIGHT 312 VIRTUAL WIDTH Nil VIRTU
         COL    420
         WIDTH  100
         HEIGHT 28
-        ACTION Nil
+        ACTION listausuarios_btnalterarusuario_action()
         CAPTION "Alterar"
         FONTNAME "Arial"
         FONTSIZE 9
@@ -86,7 +86,7 @@ DEFINE WINDOW TEMPLATE AT 173 , 446 WIDTH 550 HEIGHT 312 VIRTUAL WIDTH Nil VIRTU
         COL    420
         WIDTH  100
         HEIGHT 28
-        ACTION Nil
+        ACTION listausuarios_btnexcluirusuario_action()
         CAPTION "Excluir"
         FONTNAME "Arial"
         FONTSIZE 9

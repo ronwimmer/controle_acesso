@@ -5,6 +5,10 @@ configdb_btntestarconexao_action.prg
 configdb_form_oninit.prg
 funcoes_usuarios.Prg
 inifile.prg
+listausuarios_btnalterarusuario_action.prg
+listausuarios_btnconsultarusuario_action.prg
+listausuarios_btnexcluirusuario_action.prg
+listausuarios_btnincluirusuario_action.prg
 listausuarios_btnsairlistausuarios_action.prg
 listausuarios_form_oninit.prg
 listausuarios_form_onrelease.prg
@@ -12,6 +16,7 @@ main_form_onrelease.prg
 mostra_config.prg
 mostra_lista_usuarios.Prg
 mostra_tela_login.Prg
+mostra_tela_usuario.prg
 mysql.prg
 tela_login_btncancelar_action.prg
 tela_login_btnok_action.prg
