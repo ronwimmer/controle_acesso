@@ -64,3 +64,18 @@ function leDadosUsuario(cCodUsuario)
     aResultado := aItems[1]
     
 return aResultado
+
+function leRotinasPorUsuario(cCodUsuario)
+
+    local aResultado := {}
+    local cConsulta  := ""
+    local aItems     := {}
+
+    cConsulta := "SELECT rotina.codrotina, rotina.rotina, "
+    cConsulta += "(SELECT acesso.acesso FROM acesso "
+    cConsulta += " WHERE rotina.codrotina = acesso.codrotina AND acesso.codusuario = " + alltrim(cCodUsuario) + ") AS acessousuario "
+    cConsulta += "FROM rotina"
+
+    aResultado := MySQL_ExecQuery(oServer, cConsulta)
+
+return aResultado
