@@ -52,17 +52,21 @@ function mostraTelaUsuario(cAcao)
         else
             load window tela_usuario
 
-            setProperty("tela_usuario","tbCodigoUsuario","Value",str(aDados[1]))
-            setProperty("tela_usuario","tbNomeUsuario","Value",aDados[2])
-            setProperty("tela_usuario","tbSenhaUsuario","Value",aDados[3])
-            setProperty("tela_usuario","cbAdministrador","Value",(aDados[4]=="S"))
-            setProperty("tela_usuario","cbBloqueado","Value",(aDados[5]=="S"))
-            setProperty("tela_usuario","cbExcluido","Value",(aDados[6]=="S"))
+            if cAcao != "I"
+                setProperty("tela_usuario","tbCodigoUsuario","Value",str(aDados[1]))
+                setProperty("tela_usuario","tbNomeUsuario","Value",aDados[2])
+                setProperty("tela_usuario","tbSenhaUsuario","Value",aDados[3])
+                setProperty("tela_usuario","cbAdministrador","Value",(aDados[4]=="S"))
+                setProperty("tela_usuario","cbBloqueado","Value",(aDados[5]=="S"))
+                setProperty("tela_usuario","cbExcluido","Value",(aDados[6]=="S"))
+                setProperty("tela_usuario","tbDataCadastro","Value",aDados[7])
+                setProperty("tela_usuario","tbUltimaAlteracao","Value",aDados[8])
 
-            doMethod("tela_usuario", "gAcessosRotinas", "DeleteAllItems")
-            for nI := 1 to len(aAcessosDetalhe)
-                doMethod("tela_usuario", "gAcessosRotinas", "AddItem", aClone(aAcessosDetalhe[nI]))
-            next
+                doMethod("tela_usuario", "gAcessosRotinas", "DeleteAllItems")
+                for nI := 1 to len(aAcessosDetalhe)
+                    doMethod("tela_usuario", "gAcessosRotinas", "AddItem", aClone(aAcessosDetalhe[nI]))
+                next
+            end if
 
             activate window tela_usuario
         end if
