@@ -52,6 +52,19 @@ function mostraTelaUsuario(cAcao)
         else
             load window tela_usuario
 
+            if cAcao == "C"
+                setProperty("tela_usuario","Title","Cadastro de Usuários - Consulta")
+                setProperty("tela_usuario","btnCancelar","Caption","Voltar")
+                setProperty("tela_usuario","btnSalvar","Visible",.F.)
+            elseif cAcao == "E"
+                setProperty("tela_usuario","Title","Cadastro de Usuários - Exclusão")
+                setProperty("tela_usuario","btnSalvar","Caption","Excluir")
+            elseif cAcao == "I"
+                setProperty("tela_usuario","Title","Cadastro de Usuários - Inclusão")
+            elseif cAcao == "A"
+                setProperty("tela_usuario","Title","Cadastro de Usuários - Alteração")
+            end if
+
             if cAcao != "I"
                 setProperty("tela_usuario","tbCodigoUsuario","Value",str(aDados[1]))
                 setProperty("tela_usuario","tbNomeUsuario","Value",aDados[2])

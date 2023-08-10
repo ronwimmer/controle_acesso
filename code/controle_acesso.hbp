@@ -21,3 +21,4 @@ mysql.prg
 tela_login_btncancelar_action.prg
 tela_login_btnok_action.prg
 tela_login_form_onrelease.prg
+tela_usuario_btncancelar_action.prg
