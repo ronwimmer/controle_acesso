@@ -79,3 +79,13 @@ function leRotinasPorUsuario(cCodUsuario)
     aResultado := MySQL_ExecQuery(oServer, cConsulta)
 
 return aResultado
+
+function leRotinas()
+
+    local aResultado := {}
+    local cConsulta  := ""
+
+    cConsulta  := "SELECT codrotina, rotina FROM rotina"
+    aResultado := MySQL_ExecQuery(oServer, cConsulta)
+
+return aResultado

@@ -18,6 +18,15 @@ function mostraTelaUsuario(cAcao)
 
     if cAcao == "I"
         lAbreTela := .T.
+        aAcessos  := leRotinas()
+
+        for nI := 1 to len(aAcessos)
+            aAcessosItem := aAcessos[nI]
+            cCodRotina   := aAcessosItem[1]
+            cNomeRotina  := aAcessosItem[2]
+    
+            aadd( aAcessosDetalhe, {cCodRotina, cNomeRotina, "N", "N", "N", "N", "N"})
+        next
     else
         nItem := getProperty("listausuarios","gridListaUsuarios","Value")
 
@@ -74,12 +83,12 @@ function mostraTelaUsuario(cAcao)
                 setProperty("tela_usuario","cbExcluido","Value",(aDados[6]=="S"))
                 setProperty("tela_usuario","tbDataCadastro","Value",aDados[7])
                 setProperty("tela_usuario","tbUltimaAlteracao","Value",aDados[8])
-
-                doMethod("tela_usuario", "gAcessosRotinas", "DeleteAllItems")
-                for nI := 1 to len(aAcessosDetalhe)
-                    doMethod("tela_usuario", "gAcessosRotinas", "AddItem", aClone(aAcessosDetalhe[nI]))
-                next
             end if
+
+            doMethod("tela_usuario", "gAcessosRotinas", "DeleteAllItems")
+            for nI := 1 to len(aAcessosDetalhe)
+                doMethod("tela_usuario", "gAcessosRotinas", "AddItem", aClone(aAcessosDetalhe[nI]))
+            next
 
             activate window tela_usuario
         end if
