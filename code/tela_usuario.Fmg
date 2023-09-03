@@ -257,7 +257,7 @@ DEFINE WINDOW TEMPLATE AT 174 , 446 WIDTH 668 HEIGHT 331 VIRTUAL WIDTH Nil VIRTU
         FONTITALIC .F.
         FONTUNDERLINE .F.
         FONTSTRIKEOUT .F.
-        ONDBLCLICK Nil
+        ONDBLCLICK tela_usuario_gacessosrotinas_ondblclick()
         ONHEADCLICK Nil
         ONQUERYDATA Nil
         MULTISELECT .F.
@@ -293,7 +293,7 @@ DEFINE WINDOW TEMPLATE AT 174 , 446 WIDTH 668 HEIGHT 331 VIRTUAL WIDTH Nil VIRTU
         COL    530
         WIDTH  100
         HEIGHT 28
-        ACTION Nil
+        ACTION tela_usuario_btnsalvar_action()
         CAPTION "Salvar"
         FONTNAME "Arial"
         FONTSIZE 9
