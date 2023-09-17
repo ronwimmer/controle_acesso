@@ -89,3 +89,46 @@ function leRotinas()
     aResultado := MySQL_ExecQuery(oServer, cConsulta)
 
 return aResultado
+
+function incluiUsuario( aDados, aAcessos )
+
+    local lResultado := .F.
+    local cConsulta  := ""
+    local nAcessos   := 0
+    local aAcesso    := {}
+    local aResultado := {}
+    local cCodUsuario
+
+    // verificando se o usuário existe
+    cConsulta  := "SELECT codusuario FROM usuario WHERE nome = '" + aDados[1] + "'"
+    aResultado := MySQL_ExecQuery(oServer, cConsulta)
+
+    if len(aResultado) > 0
+        MsgStop("Usuário já existe!", "Inclusão de Usuário")
+    else
+        // gravando dados
+        cConsulta  := "INSERT INTO usuario (nome, senha, administrador, bloqueado, excluido) "
+        cConsulta  += "VALUES ('" + aDados[1] + "', '" + aDados[2] + "', '" + aDados[3] + "', '" + aDados[4] + "', '" + aDados[5] + "')"
+        lResultado := MySQL_Exec(oServer, cConsulta)
+
+        if lResultado
+            cConsulta   := "SELECT codusuario FROM usuario WHERE nome = '" + aDados[1] + "'"
+            aResultado  := MySQL_ExecQuery(oServer, cConsulta)
+            cCodUsuario := aResultado[1][1]
+
+            nAcessos    := len(aAcessos)
+            for nI := 1 to nAcessos
+                aAcesso    := aAcessos[nI]
+                cConsulta  := "INSERT INTO acesso (codusuario, codrotina, acesso) "
+                cConsulta  += "VALUES (" + str(cCodUsuario) + ", " + aAcesso[1] + ", '" + aAcesso[3] + aAcesso[4] + aAcesso[5] + aAcesso[6] + aAcesso[7] + "')"
+                lResultado := MySQL_Exec(oServer, cConsulta)
+            next
+        end if
+    end if
+
+    if lResultado
+        MsgInfo("Usuário incluído com sucesso", "Inclusão de Usuário")
+        MostraUsuarios()
+    end if
+
+return lResultado
