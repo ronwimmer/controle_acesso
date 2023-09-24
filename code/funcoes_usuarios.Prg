@@ -98,6 +98,7 @@ function incluiUsuario( aDados, aAcessos )
     local aAcesso    := {}
     local aResultado := {}
     local cCodUsuario
+    local nI := 0
 
     // verificando se o usuário existe
     cConsulta  := "SELECT codusuario FROM usuario WHERE nome = '" + aDados[1] + "'"
@@ -128,6 +129,43 @@ function incluiUsuario( aDados, aAcessos )
 
     if lResultado
         MsgInfo("Usuário incluído com sucesso", "Inclusão de Usuário")
+        MostraUsuarios()
+    end if
+
+return lResultado
+
+function alteraUsuario( cCodUsuario, aDados, aAcessos )
+
+    local lResultado := .F.
+    local cConsulta  := ""
+    local nAcessos   := 0
+    local aAcesso    := {}
+    local nI         := 0
+
+    // gravando dados
+    cConsulta  := "UPDATE usuario SET "
+    cConsulta  += "senha = '" + aDados[2] + "', "
+    cConsulta  += "administrador = '" + aDados[3] + "', "
+    cConsulta  += "bloqueado = '" + aDados[4] + "', "
+    cConsulta  += "excluido = '" + aDados[5] + "' "
+    cConsulta  += "WHERE codusuario = " + cCodUsuario
+    lResultado := MySQL_Exec(oServer, cConsulta)
+
+    if lResultado
+        cConsulta   := "DELETE FROM acesso WHERE codusuario = " + cCodUsuario
+        lResultado  := MySQL_Exec(oServer, cConsulta)
+
+        nAcessos    := len(aAcessos)
+        for nI := 1 to nAcessos
+            aAcesso    := aAcessos[nI]
+            cConsulta  := "INSERT INTO acesso (codusuario, codrotina, acesso) "
+            cConsulta  += "VALUES (" + cCodUsuario + ", " + aAcesso[1] + ", '" + aAcesso[3] + aAcesso[4] + aAcesso[5] + aAcesso[6] + aAcesso[7] + "')"
+            lResultado := MySQL_Exec(oServer, cConsulta)
+        next
+    end if
+
+    if lResultado
+        MsgInfo("Usuário alterado com sucesso", "Alteração de Usuário")
         MostraUsuarios()
     end if
 

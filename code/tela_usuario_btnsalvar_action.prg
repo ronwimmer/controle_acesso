@@ -35,6 +35,8 @@ Function tela_usuario_btnsalvar_action
         cAcao := iif(cCodUsuario == "", "I", "A")
         if cCodUsuario == ""
             lResultado := incluiUsuario( aDados, aAcessos )
+        else
+            lResultado := alteraUsuario( cCodUsuario, aDados, aAcessos )
         end if
     end if
 

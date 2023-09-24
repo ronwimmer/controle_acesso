@@ -72,6 +72,7 @@ function mostraTelaUsuario(cAcao)
                 setProperty("tela_usuario","Title","Cadastro de Usuários - Inclusão")
             elseif cAcao == "A"
                 setProperty("tela_usuario","Title","Cadastro de Usuários - Alteração")
+                setProperty("tela_usuario","tbNomeUsuario","ReadOnly",.T.)
             end if
 
             if cAcao != "I"
