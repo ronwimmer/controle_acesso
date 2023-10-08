@@ -170,3 +170,24 @@ function alteraUsuario( cCodUsuario, aDados, aAcessos )
     end if
 
 return lResultado
+
+function excluiUsuario( cCodUsuario )
+
+    local lResultado := .F.
+    local cConsulta  := ""
+    local nAcessos   := 0
+    local aAcesso    := {}
+    local nI         := 0
+
+    // gravando dados
+    cConsulta  := "UPDATE usuario SET "
+    cConsulta  += "excluido = 'S' "
+    cConsulta  += "WHERE codusuario = " + cCodUsuario
+    lResultado := MySQL_Exec(oServer, cConsulta)
+
+    if lResultado
+        MsgInfo("Usuário excluído com sucesso", "Exclusão de Usuário")
+        MostraUsuarios()
+    end if
+
+return lResultado

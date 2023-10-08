@@ -31,6 +31,7 @@ Function tela_usuario_btnsalvar_action
 
     if cBotaoAcao == "Excluir"
         cAcao := "E"
+        lResultado := excluiUsuario( cCodUsuario )
     elseif cBotaoAcao == "Salvar"
         cAcao := iif(cCodUsuario == "", "I", "A")
         if cCodUsuario == ""
@@ -40,8 +41,6 @@ Function tela_usuario_btnsalvar_action
         end if
     end if
 
-    MsgStop("Ação: "+cAcao, "Identificação de Ação")
-    
     if lResultado
         doMethod("tela_usuario", "RELEASE")
     end if
