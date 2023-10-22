@@ -191,3 +191,12 @@ function excluiUsuario( cCodUsuario )
     end if
 
 return lResultado
+
+function LeUsuarios()
+
+    local cConsulta := "SELECT codusuario, nome, senha, administrador, bloqueado, excluido, datacadastro, dataatualizacao FROM usuario"
+    local aItens    := {}
+
+    aItens := MySQL_ExecQuery( oServer, cConsulta )
+
+return aItens

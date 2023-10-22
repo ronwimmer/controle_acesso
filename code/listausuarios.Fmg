@@ -112,7 +112,7 @@ DEFINE WINDOW TEMPLATE AT 173 , 446 WIDTH 550 HEIGHT 312 VIRTUAL WIDTH Nil VIRTU
         COL    420
         WIDTH  100
         HEIGHT 28
-        ACTION Nil
+        ACTION listausuarios_btnimprimirusuarios_action()
         CAPTION "Imprimir"
         FONTNAME "Arial"
         FONTSIZE 9

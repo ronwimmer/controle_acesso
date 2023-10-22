@@ -8,6 +8,7 @@ inifile.prg
 listausuarios_btnalterarusuario_action.prg
 listausuarios_btnconsultarusuario_action.prg
 listausuarios_btnexcluirusuario_action.prg
+listausuarios_btnimprimirusuarios_action.prg
 listausuarios_btnincluirusuario_action.prg
 listausuarios_btnsairlistausuarios_action.prg
 listausuarios_form_oninit.prg
