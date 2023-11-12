@@ -17,6 +17,7 @@ main_form_onrelease.prg
 mostra_config.prg
 mostra_lista_usuarios.Prg
 mostra_tela_login.Prg
+mostra_tela_teste.Prg
 mostra_tela_usuario.prg
 mysql.prg
 tela_login_btncancelar_action.prg

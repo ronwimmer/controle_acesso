@@ -1,0 +1,271 @@
+* HMG-IDE UNICODE Form Designer Generated Code
+* (c) Roberto Lopez - http://sites.google.com/site/hmgweb
+
+DEFINE WINDOW TEMPLATE AT 199 , 487 WIDTH 332 HEIGHT 265 VIRTUAL WIDTH Nil VIRTUAL HEIGHT Nil TITLE "Tela de Teste de Acesso" ICON NIL  NOMAXIMIZE NOMINIMIZE CURSOR NIL ON INIT Nil ON RELEASE Nil ON INTERACTIVECLOSE Nil ON MOUSECLICK Nil ON MOUSEDRAG Nil ON MOUSEMOVE Nil ON SIZE Nil ON MAXIMIZE Nil ON MINIMIZE Nil ON PAINT Nil BACKCOLOR Nil NOTIFYICON NIL NOTIFYTOOLTIP NIL ON NOTIFYCLICK Nil ON GOTFOCUS Nil ON LOSTFOCUS Nil ON SCROLLUP Nil ON SCROLLDOWN Nil ON SCROLLLEFT Nil ON SCROLLRIGHT Nil ON HSCROLLBOX Nil ON VSCROLLBOX Nil
+
+    DEFINE LABEL Label_1
+        ROW    20
+        COL    30
+        WIDTH  70
+        HEIGHT 20
+        VALUE "Usuário"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL Label_2
+        ROW    50
+        COL    30
+        WIDTH  70
+        HEIGHT 20
+        VALUE "Consulta"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL Label_3
+        ROW    80
+        COL    30
+        WIDTH  80
+        HEIGHT 20
+        VALUE "Inclusão"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL Label_4
+        ROW    110
+        COL    30
+        WIDTH  70
+        HEIGHT 20
+        VALUE "Alteração"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL Label_5
+        ROW    140
+        COL    30
+        WIDTH  70
+        HEIGHT 20
+        VALUE "Exclusão"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL Label_6
+        ROW    170
+        COL    30
+        WIDTH  90
+        HEIGHT 20
+        VALUE "Impressão (R)"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL lblUsuario
+        ROW    20
+        COL    130
+        WIDTH  120
+        HEIGHT 24
+        VALUE "Label_7"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL lblConsulta
+        ROW    50
+        COL    130
+        WIDTH  120
+        HEIGHT 24
+        VALUE "Label_8"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL lblInclusao
+        ROW    80
+        COL    130
+        WIDTH  120
+        HEIGHT 24
+        VALUE "Label_9"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL lblAlteracao
+        ROW    110
+        COL    130
+        WIDTH  120
+        HEIGHT 24
+        VALUE "Label_10"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL lblExclusao
+        ROW    140
+        COL    130
+        WIDTH  120
+        HEIGHT 24
+        VALUE "Label_11"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+    DEFINE LABEL lblRelatorio
+        ROW    170
+        COL    130
+        WIDTH  120
+        HEIGHT 24
+        VALUE "Label_12"
+        FONTNAME "Arial"
+        FONTSIZE 9
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR Nil
+        FONTCOLOR Nil
+    END LABEL
+
+END WINDOW
+

@@ -200,3 +200,21 @@ function LeUsuarios()
     aItens := MySQL_ExecQuery( oServer, cConsulta )
 
 return aItens
+
+function leAcessoRotinaUsuario(cCodRotina)
+
+    local aResultado := {}
+    local cConsulta  := ""
+    local cRetorno   := "NNNNN"
+
+    cConsulta := "SELECT acesso FROM acesso "
+    cConsulta += "WHERE codrotina = " + alltrim(cCodRotina) + " AND codusuario = " + alltrim(str(pcUserCode)) + " "
+
+    if ConectaBanco()
+        aResultado := MySQL_ExecQuery(oServer, cConsulta)
+        if ! empty(aResultado)
+            cRetorno := aResultado[1][1]
+        end if
+    end if
+
+return cRetorno // "XXXXX" (CIAER)
