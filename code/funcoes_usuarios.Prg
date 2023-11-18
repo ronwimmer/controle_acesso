@@ -192,7 +192,7 @@ function excluiUsuario( cCodUsuario )
 
 return lResultado
 
-function LeUsuarios()
+function leUsuarios()
 
     local cConsulta := "SELECT codusuario, nome, senha, administrador, bloqueado, excluido, datacadastro, dataatualizacao FROM usuario"
     local aItens    := {}

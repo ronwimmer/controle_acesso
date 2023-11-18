@@ -10,6 +10,7 @@ DEFINE WINDOW TEMPLATE AT 148 , 313 WIDTH 1054 HEIGHT 581 VIRTUAL WIDTH Nil VIRT
         DEFINE POPUP "Uteis"
             MENUITEM "Usuários" ACTION mostra_lista_usuarios()
             MENUITEM "Configuração DB" ACTION mostra_configdb()
+            MENUITEM "Sobre o Sistema" ACTION mostra_tela_sobre()
         END POPUP
     END MENU
 
