@@ -19,11 +19,14 @@ mostra_lista_usuarios.Prg
 mostra_tela_login.Prg
 mostra_tela_sobre.Prg
 mostra_tela_teste.Prg
+mostra_tela_troca_senha.Prg
 mostra_tela_usuario.prg
 mysql.prg
 tela_login_btncancelar_action.prg
 tela_login_btnok_action.prg
 tela_login_form_onrelease.prg
+tela_troca_senha_btncancelarsenha_action.prg
+tela_troca_senha_btnconfirmarsenha_action.prg
 tela_usuario_btncancelar_action.prg
 tela_usuario_btnsalvar_action.prg
 tela_usuario_gacessosrotinas_ondblclick.prg

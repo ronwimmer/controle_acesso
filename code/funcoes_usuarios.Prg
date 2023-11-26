@@ -218,3 +218,22 @@ function leAcessoRotinaUsuario(cCodRotina)
     end if
 
 return cRetorno // "XXXXX" (CIAER)
+
+function alteraSenha( cNovaSenha )
+
+    local lResultado := .F.
+    local cConsulta  := ""
+
+    // gravando dados
+    cConsulta  := "UPDATE usuario SET "
+    cConsulta  += "senha = '" + alltrim(cNovaSenha) + "' "
+    cConsulta  += "WHERE codusuario = " + alltrim(str(pcUserCode))
+    lResultado := MySQL_Exec(oServer, cConsulta)
+
+    if lResultado
+        MsgInfo("Senha alterada com sucesso!", "Alteração de Senha")
+    else
+        MsgInfo("Senha não alterada!", "Alteração de Senha")
+    end if
+
+return lResultado
